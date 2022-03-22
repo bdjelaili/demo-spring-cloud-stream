@@ -1,0 +1,14 @@
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9094
+      function:
+        definition: myConsumer
+      bindings:
+        myConsumer1-in-0:
+          destination: myTopic1
+        myConsumer2-in-0:
+          destination: myTopic2
